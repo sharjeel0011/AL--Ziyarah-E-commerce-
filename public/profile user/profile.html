@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <style>
+        .todo-header {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 20px;
+    background-color: #343a40;
+    color: #ffffff;
+    padding: 15px;
+    text-align: center;
+}
+#homeBtn{
+    background-color: #28a745;
+    color: #ffffff;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+    /* margin-left: 75%;   */
+}
+#logoutbtn {
+    background-color: #ac2121;
+    color: #ffffff;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+    margin-left: 70%;
+    
+}
+#logoutbtn :hover{
+    background-color: #b00a0a;
+}
+@media (max-width: 768px) {
+    #logoutbtn {
+        margin-left: 8%;
+    }
+    .todo-header {
+        padding: 10px;
+    }
+}
+#header {
+    background-color: #d9d9d9;
+    color: #333;
+    text-align: center;
+    padding: 20px;
+    font-size: 2.2rem;
+}
+
+
+#user-see-box{
+    width: 350px;
+    background-color: #d2d2d2;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin: auto;
+    margin-top: 2%;
+    font-size: 16px;
+}
+#profile-list{
+    
+    padding: 0px;
+    background-color: #343a40;
+    color: #fff;
+    height: auto;
+    padding-bottom: 5px;
+}
+    </style>
+
+<link rel="stylesheet" href="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+<link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="todo-header">
+        <div id="header-div"><h1>AL-Ziyarah</h1></div>
+         <button id="logoutbtn">Logout</button>
+        <a href="../index.html"><button id="homeBtn" >Home</button> </a> 
+         <img id="Profile-Img-heder" style="border-radius: 50%; cursor: pointer;" width="40px" height="40px" src="1.gif" alt="" >
+    </div>
+    <div id="user-see-box">
+        <div id="profile-list">
+        <center>
+        <div id="header">PROFILE</div>
+        <img id="profile-user-img" src="" alt="" style="border-radius: 40%;" width="150px" height="150px"><br>
+       <h1>Hi!!</h1>
+        <h2 id="username"></h2>
+        <h3 id="email"></h3>
+        <h3  id="UpdatephoneNumer" ></h3>
+        <h3 id="user-age"></h3>
+    </center>
+</div>
+</div>
+
+
+
+<div class="modal fade" id="orderConfirmationsModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="orderConfirmationModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="orderConfirmationsModalLabel">Hi! <br>Follow Guide Line To Access Profile OR click OK then you go Signup Page </h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p><b>Guide Line:</b></p>
+          <ul>
+            <li><b>Step 1:</b></li>
+            <li><p>Go Back Home Page Create Your Account Click on Signup!</p></li>
+            <li><b>Step 2:</b></li>
+            <li> <p>Login Your account </p></li>
+            <li><b>Step 3:</b></li>
+            <li> <p>Enjoy Your Shopping Experience (Optional) </p><i class="fa-solid fa-bag-shopping"></i></li>
+          </ul>
+         
+        </div>
+        <div class="modal-footer">
+          <button id="btnGOCret" type="button" class="btn btn-primary" data-bs-dismiss="modal">OK</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+    
+    <script type="module" src="profile.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

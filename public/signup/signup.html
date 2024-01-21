@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <style>
+        body {
+            background-color: #e9e7e7;
+            font-family:  sans-serif;
+        }
+
+        #form-container {
+            max-width: 400px;
+            margin: auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 5px 5px 7px 0px rgb(157, 155, 155);
+            border-radius: 15px;
+            /* display: none; */
+        }
+
+        #form-container h1 {
+            color: #333;
+            font-size: 2.5em;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .input {
+            width: 100%;
+            height: 40px;
+            margin-bottom: 15px;
+            padding: 8px;
+            border: 1px solid rgb(186, 186, 186);
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        #btn-login,
+        #btn-first-page {
+            width: 100%;
+            height: 50px;
+            border-radius: 5px;
+            border: none;
+            color: #fff;
+            background-color: #444;
+            cursor: pointer;
+        }
+
+        #btn-login:hover,
+        #btn-first-page:hover {
+            background-color: #333;
+        }
+
+        #buttonTwo {
+            width: 100%;
+            height: 50px;
+            border: none;
+            color: #fff;
+            background-color: #28a745;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #buttonTwo:hover {
+            background-color: rgb(5, 146, 5);
+        }
+
+        #login1_box{
+            display: none;
+        }
+    </style>
+      <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"> -->
+    <link rel="stylesheet" href="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+</head>
+
+<body>
+    <div id="form-container">
+        <h1>Sign Up</h1>
+        <center>
+            <p style="color: rgb(25, 152, 46);" id="done"> </p>
+<p style="color: red;" id="err"> </p>
+</center>
+        <form id="form" action="">
+            <!-- First Page -->
+            <div id="first-page">
+                <input required id="name" class="input" type="text" placeholder="Your Name">
+                <input  required id="number" class="input" type="number" placeholder="Your Phone Number">
+                <label for="dateOfBirth">Your Date Of birth
+                    
+                <input required id="dateOfBirth" class="input" type="date" placeholder="Your Date of Birth">
+            
+            </label>
+                <label for="img">Select Your Image must!
+                <input type="file" id="img" class="input">
+            </label>
+                <br>
+                <label for="btn-first-page">Click Next Button
+                <button  id="btn-first-page">NEXT</button>
+            </label>
+            </div>
+
+            <!-- Last Page -->
+            <div id="login1_box">
+                <!-- <p id="show-err" style="color: rgb(216, 15, 15);"></p> -->
+                <input required id="email" class="input" type="email" name="Email" placeholder="Email Address ">
+                <input required id="password" class="input" type="password" name="password" placeholder="Password">
+               
+                <br><br>
+                <button id="btn-login" class="btn btn-primary"><b>Sign up</b></button>
+<div class="text-center" style="display: none;" id="loading-spinner">
+    <div class="spinner-border" role="status">
+        <span class="visually-hidden">Loading...</span>
+    </div>
+</div>
+                <!-- <button id="btn-login"><b>Sign up</b></button> -->
+                <div style="text-align: center; margin-top: 20px;">
+                   
+                    <hr>
+                </div>
+            </div>
+        </form>
+   
+<br><br>
+    <div class="login_box">
+        <center> 
+            <!-- <a href="../index.html">Click  go Home</a> -->
+            <label for="buttonTwo">If you have alrady Account Click To Login?
+           <a style="color: #333;" href="../login/login.html"><button id="buttonTwo"><b>Login</b></button></a>
+        </label>
+        </center>
+    </div>
+ </div>
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+ <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script> -->
+    <script type="module" src="signup.js"></script>
+ 
+    <script>
+
+    </script>
+</body>
+
+</html>

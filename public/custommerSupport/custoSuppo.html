@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customer Support</title>
+  <style>
+    body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+.navbar {
+  background-color: #333;
+  padding: 10px;
+  color: white;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  padding: 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.navbar a:hover {
+  background-color: #555;
+}
+
+.support-container {
+  max-width: 600px;
+  margin: 50px auto;
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+h2 {
+  color: #333;
+}
+
+.contact-info {
+  margin-top: 20px;
+}
+
+.whatsapp-icon {
+  font-size: 24px;
+  color: #25D366; /* WhatsApp green color */
+  margin-right: 10px;
+}
+
+.whatsapp-number {
+  font-size: 18px;
+  color: #333;
+}
+
+   #btn{
+    width: auto;
+    height: auto;
+    padding: 0.5em;
+    background-color: rgb(33, 131, 33);
+   }
+   @media(max-width:768px){
+#imgWhatsapp{
+    width: 200px;
+}
+   }
+  </style>
+</head>
+<body>
+
+<div class="navbar">
+ <h1>Customer Support</h1>
+   <a id="btn" href="../index.html">Home</a>
+</div>
+
+<div class="support-container">
+  <h2>Get in Touch</h2>
+  <p>If you need assistance, feel free to contact us:</p>
+
+  <div class="contact-info">
+    <p>
+      <span class="whatsapp-icon">&#x1F4F1;</span>
+      <span class="whatsapp-number">WhatsApp: +92 313 2476356</span><br><br>
+      <span class="whatsapp-number">Scan QR Code </span><br><br>
+      <center>
+      <span><img width="400px" id="imgWhatsapp"  src="../images/whatsappLInk.jpg" alt=""></span>
+    </center>
+    </p>
+  </div>
+</div>
+
+</body>
+</html>

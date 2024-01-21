@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AL-Ziyarah Shopping Cart</title>
+    <link rel="stylesheet" href="cart.css">
+    <link rel="stylesheet" href="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Shopping Cart</h1>
+    </header>
+
+
+    <nav class="navbar bg-dark border-bottom border-body" data-bs-theme="dark">
+        
+        <div class="container-fluid">
+          <a class="navbar-brand" href="../index.html">AL-Ziyarah</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../profile user/profile.html">Profile</a>
+              </li>
+              
+            </ul>
+          </div>
+        </div>
+  </nav>
+
+    <main>
+        <section id="cart-items"></section>
+        <section id="cart-summary">
+            <h2>Cart Summary</h2>
+            <div id="calculate-sec">
+                
+                <p id="total-item">Total Items: <span id="total-items">0</span></p>
+                <p id="ProductPrice">Total Product Price: <span>0</span></p>
+                <p id="delivery-fee">Total Delivery Fee: <span>0</span></p>
+                <p id="total-cost">Total Cost: <span id="total-cost">0.00 <sub>PKR</sub></span></p>
+                <button id="checkout-btn">Click to Confirm Order</button>
+            </div>
+        </section>
+        <section id="secMorede" >
+    
+            <div id="userDetailsPage">
+                <form action="" id="form">
+                    <div>
+                        Full Name
+                        <input required id="Full-Name" type="text" placeholder="Full Name">
+                    </div>
+        
+                    <div>
+                        Mobile Number
+                        <input required id="Mobile-Number" type="text" placeholder="Mobile Number">
+                    </div>
+        
+                    <div>
+                        Provence
+                        <input required id="Provence"  type="text" placeholder="Provence">
+                    </div>
+        
+                    <div>
+                        City
+                        <input required id="city"  type="text" placeholder="City">
+                    </div>
+        
+                    <div>
+                        Town or any area
+                        <input required id="Town-or-any-area" type="text" placeholder="Town or any area">
+                    </div>
+        
+                    <div>
+                        Full Address
+                        <input required id="Full-adress" type="text" placeholder=" Full Address">
+                    </div>
+        
+                    <div>
+                        Sector / Phase /Block
+                        <input required id="sector" type="text" placeholder="e.g.Sector / Phase /Block....">
+                    </div>
+        
+                    <div>
+                        House Number
+                        <input required id="House-Number" type="text" placeholder="House-Number">
+                    </div>
+        
+                    <div>
+                        Any Nearest Point
+                        <input required id="any-nearest-point" type="text" placeholder="e.g. ABC School, College, Restaurant">
+                    </div>
+        
+                    <!-- <button  type="submit" id="order-place-btn">Order Place</button> -->
+
+                    <button required type="submit" id="order-place-btn" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#anotherUniqueId">
+                        Order Placed
+                       </button>
+                </form>
+            </div>
+            </section>
+    </main>
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="staticBackdropLabel">Delete</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+         This Product is Delete Successfuly.....
+        </div>
+        <div class="modal-footer">
+          <button  type="button" class="btn btn-secondary " data-bs-dismiss="modal">Ok</button>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- Second Modal with a different id -->
+<div class="modal fade" id="anotherUniqueId" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="anotherUniqueIdLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="anotherUniqueIdLabel">congratulations your Order is Placed is Successfully!!</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            Your Order is Placed. Our Team will Contact You Soon Today.... <br>
+            <p>
+              <ul>
+                <li><b>Q: Any Query About the Product and Other?</b></li>
+                <b>Ans:</b> When Our Team Contacts You, Feel Free to Ask.
+              </ul>
+              <ul>
+                <li><b>Q: Any Query About Delivery Time?</b></li>
+                <b>Ans:</b> 6 Working Days Attempt to Deliverd Your Order
+              </ul>
+            </p>
+        </div>
+        <div class="modal-footer">
+          <button id="relodbtn" type="button" class="btn btn-secondary" data-bs-dismiss="modal">Ok</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  <!-- <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#anotherUniqueId">
+   Order Placed
+  </button> -->
+
+
+
+  <div class="modal fade" id="orderConfirmationsModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="orderConfirmationModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="orderConfirmationsModalLabel">Hi! <br>Well Come   </h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p><b>Guide Line:</b></p>
+          <ul>
+            <li><b>Step 1:</b></li>
+            <li><p>Plese Create Your Account Click on Signup!</p></li>
+            <li><b>Step 2:</b></li>
+            <li> <p>Login Your account </p></li>
+            <li><b>Step 3:</b></li>
+            <li> <p>Enjoy Your Shopping Experience </p><i class="fa-solid fa-bag-shopping"></i></li>
+          </ul>
+         
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-bs-dismiss="modal">OK</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+    <footer>
+        <p>© 2024 Your Website. All rights reserved. | Deployed by H. Sharjeel</p>
+    </footer>
+    <script type="module" src="cart.js"></script>
+    <script  type="module" src="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+  </body>
+</html>

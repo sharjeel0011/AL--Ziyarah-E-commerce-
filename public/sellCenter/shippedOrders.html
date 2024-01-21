@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            height: auto;
+        }
+        
+        /* header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+        } */
+        
+        main {
+            padding: 1rem;
+        }
+        
+        #dashboard {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .box {
+            background-color: #ebebeb;
+            padding: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%; /* Adjust the width for mobile devices */
+            margin-bottom: 1rem;
+            height: auto;
+        }
+        
+        h2, h3 {
+            color: #333;
+        }
+        
+        form {
+            display: grid;
+            gap: 2.5rem;
+            max-width: 400px;
+            margin-top: 1rem;
+        }
+        
+        /* button {
+            background-color: #333;
+            color: white;
+            padding: 0.5rem 1rem;
+            border: none;
+            cursor: pointer;
+            width: 100%; 
+        } */
+        
+        .orders-list {
+            margin-top: 1rem;
+        }
+        
+        #orders-list-container {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .order-item {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 1rem;
+            padding: 1rem;
+        }
+        
+        .order-details {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .order-status {
+            font-weight: bold;
+        }
+        
+        .Click-To-Shiped-Order {
+            background-color: #c73535;
+            color: #fff;
+            border: none;
+            padding: 0.5em;
+            gap: 20px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        .Click-To-Shiped-Order:hover{
+            background-color: #ee0d0d;
+        }
+        .Click-To-Detail-Order{
+            background-color:  #5db649;
+            color: #fff;
+            border: none;
+            padding: 0.5em;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        .Click-To-Detail-Order:hover{
+            background-color:  #48db27;
+        }
+        nav{
+            position: fixed;
+        }
+        
+        
+            </style>
+              <link rel="stylesheet" href="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+              <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+              
+</head>
+<body>
+    <nav class="navbar bg-dark border-bottom border-body" data-bs-theme="dark">
+        
+        <div class="container-fluid">
+          <a class="navbar-brand" href="sellCenter.html">Shipped orders</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="shippedOrders.html">Shipped Orders</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="sellCenter.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="sellCenter.html">Product Upload</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="sellCenter.html">Pending Orders</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+  </nav>
+    <div class="box" id="see-orders-box">
+        <h2>Shipped Orders</h2>
+        
+        <div id="ordersShipped">
+            <h3>Orders</h3>
+            
+            <!-- <li class="order-item">
+                <div class="order-details">
+                    <span>${`Order #${order.orderNumber}`}</span>
+                    <span class="order-status">${`Status: ${order.status}`}</span>
+                </div>
+                <button class="Click-To-Shiped-Order" >Shipped Order</button>
+                <button class="Click-To-Detail-Order" >Check  Order Details</button>
+            </li> -->
+        </div>
+    </div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="staticBackdropLabel">Say AL-Ziyarah</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+             Order is Delete Successfuly.....
+            </div>
+            <div class="modal-footer">
+              <button id="deleteShippedOrder" type="button" class="btn btn-secondary " data-bs-dismiss="modal">Ok</button>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- <button  type="button" class=" btn-success deletebtn " data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+        Delete
+      </button> -->
+
+
+
+
+
+
+<script type="module" src="shippedorder.js"></script>
+<script  type="module" src="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
